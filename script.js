@@ -150,7 +150,7 @@ const offersData = {
         { name: "Hair Envest Package 2", price: "₹3,199", image: "images/offers/hair-envest-2.jpg" },
         { name: "Hair Envest Package 1", price: "₹2,599", image: "images/offers/hair-envest-1.jpg" },
         { name: "Jaanch - Men's Skin Care Checkup", price: "₹3,699", image: "images/offers/jaanch-mens-skin-care.jpg" },
-        { name: "Jaanch - Women's Skin Care Checkup", price: "3,699", image: "images/offers/1793552089173 (1).png" }
+        { name: "Jaanch - Women's Skin Care Checkup", price: "₹3,699", image: "images/offers/1793552089173 (1).png" }
     ],
 
     hormonal: [
