@@ -1565,3 +1565,91 @@ footer {
         height: 320px;
     }
 }
+/* RUMVI Premium Special Offer Category Cards */
+
+.offer-categories {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.offer-category {
+    position: relative;
+    overflow: hidden;
+    min-height: 165px;
+    padding: 30px 22px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #087eae, #0f9b8e);
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 8px 22px rgba(0, 80, 110, 0.16);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.offer-category::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    right: -30px;
+    top: -35px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+}
+
+.offer-category::after {
+    content: "EXPLORE PACKAGES  →";
+    display: inline-block;
+    margin-top: 17px;
+    padding: 8px 13px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.17);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.offer-category h3 {
+    position: relative;
+    color: white;
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.offer-category p {
+    position: relative;
+    color: #eaffff;
+    font-size: 14px;
+    margin: 0;
+}
+
+.offer-category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 80, 110, 0.25);
+}
+
+@media (max-width: 768px) {
+    .offer-categories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .offer-category {
+        min-height: 155px;
+        padding: 22px 14px;
+    }
+
+    .offer-category h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .offer-categories {
+        grid-template-columns: 1fr;
+    }
+}

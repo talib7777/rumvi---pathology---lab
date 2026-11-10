@@ -135,42 +135,52 @@ document.getElementById("searchReportBtn").addEventListener("click", async funct
 // ==================================
 
 const offersData = {
-    women: [
-        { name: "Weakness Profile Female", price: "₹2,399", image: "images/offers/weakness-female.jpg" },
-        { name: "Special Female Profile Health Checkup", price: "₹3,399", image: "images/offers/special-female.jpg" },
-        { name: "PCOD AMH Profile", price: "₹3,999", image: "images/offers/pcod-amh-profile.jpg" }
-    ],
 
-    men: [
-        { name: "Weakness Profile Male", price: "₹2,399", image: "images/offers/weakness-male.jpg" },
-        { name: "Special Male Profile Health Check", price: "₹3,399", image: "images/offers/special-male.jpg" }
-    ],
-
-    hair: [
-        { name: "Hair Envest Package 2", price: "₹3,199", image: "images/offers/hair-envest-2.jpg" },
-        { name: "Hair Envest Package 1", price: "₹2,599", image: "images/offers/hair-envest-1.jpg" }
-    ],
-
-    gym: [
-        { name: "GYM – Titanium Package", price: "₹3,199", image: "images/offers/gym-titanium.jpg" }
-    ],
-
-    skin: [
-        { name: "Jaanch - Mens Skin Care Checkup", price: "₹3,699", image: "images/offers/jaanch-mens-skin-care.jpg" }
-    ],
-
-    health: [
-        { name: "Allergy Profile Package", price: "₹5,555", image: "images/offers/allergy-profile.jpg" },
-        { name: "Special Health Package", price: "₹2,399", image: "images/offers/special-health.jpg" },
+    specialHealth: [
         { name: "Complete Health Test Package", price: "₹1,899", image: "images/offers/complete-health-test.jpg" },
+        { name: "Special Health Package", price: "₹2,399", image: "images/offers/special-health.jpg" },
         { name: "Family Health Package", price: "₹3,699", image: "images/offers/family-health.jpg" },
-        { name: "Aarogyam XL Plus Package", price: "₹11,999", image: "images/offers/aarogyam-xl-plus.jpg" },
+        { name: "Special Female Profile Health Checkup", price: "₹3,399", image: "images/offers/special-female.jpg" },
+        { name: "Special Male Profile Health Checkup", price: "₹3,399", image: "images/offers/special-male.jpg" },
+        { name: "Aarogyam XL Pro Package – 133 Parameters", price: "₹10,999", image: "images/offers/arogyam.jpg" },
+        { name: "Aarogyam XL Plus Package – 157 Parameters", price: "₹11,999", image: "images/offers/aarogyam-xl-plus.jpg" }
+    ],
+
+    hairSkin: [
+        { name: "Hair Envest Package 2", price: "₹3,199", image: "images/offers/hair-envest-2.jpg" },
+        { name: "Hair Envest Package 1", price: "₹2,599", image: "images/offers/hair-envest-1.jpg" },
+        { name: "Jaanch - Men's Skin Care Checkup", price: "₹3,699", image: "images/offers/jaanch-mens-skin-care.jpg" },
+        { name: "Jaanch - Women's Skin Care Checkup", price: "Contact for price", image: "images/offers/1793552089173 (1).png" }
+    ],
+
+    hormonal: [
+        { name: "PCOD AMH Profile", price: "₹3,999", image: "images/offers/pcod-amh-profile.jpg" },
+        { name: "Hormonal Profile Test Package", price: "₹2,199", image: "images/offers/hormone-profile.jpg" }
+    ],
+
+    heartCancer: [
         { name: "Cardiac Risk Markers", price: "₹6,275", image: "images/offers/cardiac-risk.jpg" },
-        { name: "Cancer Detection Profile 1", price: "₹6,000", image: "images/offers/cancer-detection.jpg" },
-        { name: "HORMONE Profile Test Package", price: "₹2,199", image: "images/offers/hormone-profile.jpg" }
+        { name: "Cancer Detection Profile", price: "₹6,000", image: "images/offers/cancer-detection.jpg" }
+    ],
+
+    allergyWeakness: [
+        { name: "Allergy Profile Package", price: "₹5,555", image: "images/offers/allergy-profile.jpg" },
+        { name: "Gym Is a Habit", price: "₹3,199", image: "images/offers/gym-titanium.jpg" },
+        { name: "Weakness Profile Female", price: "₹2,399", image: "images/offers/weakness-female.jpg" },
+        { name: "Weakness Profile Male", price: "₹2,399", image: "images/offers/weakness-male.jpg" }
+    ],
+
+    anemia: [
+        { name: "Anemia Profile I", price: "₹1,399", image: "images/offers/1794156350147.png" },
+        { name: "Anemia Profile II", price: "₹1,799", image: "images/offers/IMG_20261108_224237 (1).png" },
+        { name: "Anemia Profile III", price: "₹2,499", image: "images/offers/1794157428538.png" },
+        { name: "Low Hemoglobin", price: "₹3,999", image: "images/offers/1794158299038.png" }
     ]
+
 };
 
+   
+    
 function showOffers(category) {
 
     const container = document.getElementById("offerPackages");
@@ -179,14 +189,13 @@ function showOffers(category) {
     if (!packages || !container) return;
 
     const categoryNames = {
-        women: "Women's Health Packages",
-        men: "Men's Health Packages",
-        hair: "Hair Care Packages",
-        gym: "Gym & Fitness Packages",
-        skin: "Skin Care Packages",
-        health: "Complete Health Packages"
-    };
-
+    specialHealth: "Special Health and Body Profile Packages",
+    hairSkin: "Hair and Skin Fall Screening Package",
+    hormonal: "Hormonal Profile and PCOD Packages",
+    heartCancer: "Heart and Cancer Detection Profile",
+    allergyWeakness: "Allergy, Weakness and Gym Packages",
+    anemia: "Anemia Profile Package"
+};
     container.innerHTML = `
         <div class="offer-folder-backdrop"
              onclick="if(event.target === this) closeOfferFolder()">
